@@ -1,45 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+{{extend './layout.html'}}
 
-<head>
-	<title>Home</title>
+{{ block 'head' }}
+<style>
+    body {
+        background-color: skyblue;
+    }
+</style>
+{{ /block }}
 
-	<!-- Meta -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Blog Template">
-	<meta name="keywords" content="" />
-	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">
-	<link rel="shortcut icon" href="./favicon.ico">
-	<!-- FontAwesome JS-->
-	<!-- <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"></script> -->
-	<!-- Theme CSS -->
-	<link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
-</head>
+{{ block 'content' }}
+<div>
+    <h1>index 页面填坑内容</h1>
+</div>
+{{ /block }}
 
-<body>
-	{{include './home/navigation.html'}}
-	<div class="main-wrapper">
-		{{include './home/homeHead.html'}}
-		<section class="blog-list px-3 py-5 p-md-5">
-			<div class="container">
-				<!--//item-->
-					{{include './home/homeItem.html'}}
-					{{include './home/next.html'}}
-			</div>
-		</section>
-		{{include './home/footer.html'}}
-		{{include './home/theme.html'}}
-	</div>
-	<script src="assets/plugins/jquery-3.3.1.min.js"></script>
-	<script src="assets/plugins/popper.min.js"></script>
-	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/js/all.js"></script>
-	<!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
-	<script src="assets/js/demo/style-switcher.js"></script>
-
-
-</body>
-
-</html>
+{{ block 'script' }}
+<script>
+    window.alert('index 页面自己的 js 脚本')
+</script>
+{{ /block }}

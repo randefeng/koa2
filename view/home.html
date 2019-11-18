@@ -1,0 +1,14 @@
+{{extend './layout.html'}}
+
+{{ block 'content' }}
+<div class="main-wrapper">
+    {{include './home/homeHead.html'}}
+    <section class="blog-list px-3 py-5 p-md-5">
+        <div class="container">
+            <!--//item-->
+            {{include './home/homeItem.html'}}
+            {{include './home/next.html'}} 
+        </div>
+    </section>
+</div>
+{{ /block }}

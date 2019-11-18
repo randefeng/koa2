@@ -11,12 +11,16 @@ render(app, {
   debug: process.env.NODE_ENV !== 'production'
 });
 app.use(static('./static'));
+router.get('/' , async function (ctx) {
+  await ctx.render('home');
+
+});
 router.get('/:category' , async function (ctx) {
+  
   if(ctx.params =='{}'){
-    await ctx.render('index');
+    await ctx.render('home');
   }else{
       await ctx.render(ctx.params.category);
-   
   }
 });
 // router.get('/' , async function (ctx) {

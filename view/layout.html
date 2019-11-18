@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="keywords" content="" />
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <!-- FontAwesome JS-->
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"></script> -->
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+    <link rel="stylesheet" href="assets/enlargeImage/enlargeImage.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="assets/enlargeImage/dark.css" />
+    {{ block 'head' }}
+    <!-- 留一个样式坑，将要留给继承该模板的模板去填坑 -->
+    {{ /block }}
+</head>
+
+<body>
+    {{include './home/navigation.html'}}
+    {{ block 'content' }}
+    <!-- 留一个内容坑，将要留给继承该模板的模板去填坑 -->
+    <!-- 坑里可以有一些默认内容 -->
+    {{ /block }}
+
+    <!-- 包含公共底部 -->
+    {{include './home/footer.html'}}
+    {{include './home/theme.html'}}
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/all.js"></script>
+
+    <!-- Page Specific JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/blog.js"></script>
+
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="assets/js/demo/style-switcher.js"></script>
+    <script src="assets/enlargeImage/jqueryLibrary.min.js"></script>
+    <script src="assets/enlargeImage/jquery.imgbox.pack.js"></script>\
+   <script>
+     $(function () {
+        $(".example1").imgbox();
+        $(".example2").imgbox({
+            'speedIn': 0,
+            'speedOut': 0,
+            'alignment': 'center',
+            'overlayShow': true,
+            'allowMultiple': false
+        });
+    });
+   </script>
+    {{ block 'script' }}
+    <!-- 留一个脚本坑 -->
+     
+    {{ /block }}
+ 
+</body>
+
+</html>

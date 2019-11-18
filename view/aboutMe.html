@@ -1,0 +1,13 @@
+{{extend './layout.html'}}
+
+{{ block 'content' }}
+<div class="main-wrapper">
+    <article class="about-section py-5">
+        <div class="container">
+            {{include './about/list.html'}}
+        </div>
+    </article>
+</div>
+{{include './home/homeHead.html'}}
+
+{{ /block }}
