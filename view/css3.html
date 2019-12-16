@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        button[disabled] {
+            cursor: default;
+        }
+
+        button {
+            cursor: pointer
+        }
+
+        div[div1] {
+            margin: auto;
+            background: rebeccapurple;
+            width: 500px;
+            height: 500px;
+            position: relative;
+            float: left;
+        }
+
+        div[div12] {
+            background: red;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+        }
+
+        img {
+            /* transform: rotate(100deg) */
+            transition: all 3s;
+
+            transform-origin: 0 50px;
+        }
+
+        img:hover {
+            transform: rotate(360deg)
+        }
+
+        div[div1] {
+            margin: 10px;
+            overflow: hidden;
+            width: 400px;
+            height: 400px;
+            background: pink;
+
+        }
+
+        div[div1]::before {
+            display: block;
+            content: '11';
+            width: 100%;
+            height: 100%;
+            transform: rotate(10deg);
+            background: rebeccapurple;
+            transition: all 1s;
+            transform-origin: left bottom;
+        }
+
+        div[div1]:hover::before {
+            transform: rotate(0deg);
+        }
+
+        div[div="scale"] {
+            overflow: hidden;
+            margin: 150px;
+            width: 200px;
+            height: 200px;
+            background: chartreuse;
+            transition: all 1s;
+
+        }
+
+        img[id="11"]:hover {
+            transform: scale(1.1);
+        }
+
+
+        li {
+            float: left;
+            line-height:30px ;
+            list-style: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            border: 1px solid chocolate;
+            margin: 10px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.5s;
+            box-shadow: 0 0 10px green
+        }
+
+        li:hover {
+            transform: scale(1.5);
+        }
+
+
+        @keyframes move {
+            0% {
+                transform: translate(0px, 0px);
+            }
+
+            25% {
+                transform: translate(1100px, 0);
+            }
+
+            50% {
+                transform: translate(1100px, 550px);
+            }
+
+            75% {
+                transform: translate(0, 550px);
+            }
+
+            100% {
+                transform: translate(100px);
+            }
+
+
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation: move 1s linear infinite;
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation: move 1.2s linear infinite;
+        }
+
+        .scty div[class^="div"] {
+            position: absolute;
+            margin: 120px;
+            float: left;
+            width: 8px;
+            height: 8px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            box-shadow: 0 0 12px rosybrown;
+            animation: move2_qipao 1s linear infinite;
+        }
+
+        .scty div.box2{
+           animation-delay: 0.4s;
+        }
+        .scty div.box3{
+           animation-delay: 0.8s;
+        }
+        @keyframes  move2_qipao{   
+           
+            75%{
+                width: 30px;
+                height: 30px;
+                opacity: 1;
+            }
+            100%{
+                width: 40px;
+                width: 40px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body style="height: 1000px;">
+    <h1></h1>
+
+    <button>阿牛</button>
+    <button>阿牛</button>
+    <button disabled="disabled">阿牛</button>
+    <button disabled="disabled">阿牛</button>
+    <div>
+        <div div1>
+            <div div12> <img src="http://172.19.134.12:3000/assets/images/profile.png " width="214" height="214" />
+            </div>
+        </div>
+        <div style="float: left;">
+            缩放
+            <div div="scale">
+                <a href="#">
+                    <img id="11" src="http://172.19.134.12:3000/assets/images/profile.png " />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <div class="box2"> </div>
+    <div class="box3"> </div>
+    <form action="http://localhost:3000/uploadfile" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="file" value="" multiple="multiple" />
+        <input type="submit" value="提交" />
+    </form>
+    <br/>
+
+    <div class="scty">
+        <div  class="div1" ></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+    </div>
+
+
+    <a href="itms-services:///?action=download-manifest&;url=http://itraderuat.chinamoney.com.cn/uploads/pkgFiles/000008_1576043679792.ipa" >app名称</a>
+<a href="http://172.19.132.125:8888//output/aaaht10007/01.44.0015/0000/android/aaaht10007_android_01.44.0015_0000_39815_0.apk">appLKKKK名称</a>
+
+</body>
+<script>
+   //  window.location.href = "http://172.19.132.125:8888//output/aaaht10007/01.44.0015/0000/android/aaaht10007_android_01.44.0015_0000_39815_0.apk";
+    var u = navigator.userAgent, app = navigator.appVersion;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+    var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    if (isAndroid) {
+       //这个是安卓操作系统
+       alert("isAndroid")
+    }
+    if (isIOS) {
+        alert("isIOS")
+　　　　//这个是ios操作系统
+    }
+</script>
+</html>
