@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>itrader下载</title>
 </head>
 <body>
     <div id="id1" style="position: absolute; margin: 40%; width: 200px;">
@@ -20,13 +20,13 @@
     isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1,
     isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
     urls = {
-        'android':'http://172.19.132.125:8888//output/aaaht10007/01.44.0015/0000/android/aaaht10007_android_01.44.0015_0000_39815_0.apk',
+        'android':'http://itraderst.chinamoney.com.cn/uploads/pkgFiles/000001_1446792453926.apk',
         'ios':'itms-services://?action=download-manifest&url=https://gitee.com/randefeng/testcss2/raw/master/aaaht10007.plist',
         'other':'http://21231231/index.html'
     };
     if(isAndroid){
         window.location.href=urls.android;
-    }else if(isiOS){
+    }else if(isiOS){    
         window.location.href=urls.ios;
     }else{
         // window.location.href=urls.other;

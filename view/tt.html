@@ -1,0 +1,733 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>网络问卷调查</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <style>
+        @font-face{
+            font-family: 'MicrosoftYaHei';
+            src:  url('font/MicrosoftYaHei.TTF')
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+
+        html {}
+
+        body {
+            font-size: 14px;
+            color: #181818;
+            font-family: "Helvetica";
+            background-color: #FFFFFF;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        h2 {
+            /*font-size :1.5rem;
+				font-weight:normal;
+				color:#333; */
+            font-family: MicrosoftYaHei;
+            font-size: 14px;
+            color: #181818;
+            letter-spacing: 0;
+            line-height: 17px;
+            font-weight: 600;
+        }
+
+        h2 span {
+            color: red;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            display: block;
+            float: left;
+        }
+
+        input[type="radio"] {
+            background: url(images/Oval_3.png) no-repeat center top / 12px 12px;
+            width: 12px;
+            height: 12px;
+            margin: 6px 10px 0 0;
+        }
+
+        input[type="radio"]:checked {
+            background: url(images/Group_28.png) no-repeat center top / 12px 12px;
+        }
+
+        input[type="checkbox"] {
+            background: url(images/Oval_3.png) no-repeat center top / 12px 12px;
+            width: 12px;
+            height: 12px;
+            margin: 6px 10px 0 0;
+        }
+
+        input[type="checkbox"]:checked {
+            background: url(images/Group_28.png) no-repeat center top / 12px 12px;
+        }
+
+        .box {
+            height: 100%;
+            background-color: #FFFFFF;
+
+        }
+
+        .Worldhead {
+            font-family: MicrosoftYaHei;
+            font-size: 18px;
+            color: #3697DD;
+            letter-spacing: 2.66px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .questionnaire {
+            padding: 43px 58px;
+
+        }
+
+        .questionnaire .content {}
+
+        .content li {
+            float: left;
+            width: 100%;
+            /* height: 1.0625rem; */
+            font-family: MicrosoftYaHei;
+            font-size: 14px;
+            color: #181818;
+            letter-spacing: 0;
+            line-height: 1.375rem;
+        }
+
+        .content ul {
+            overflow: hidden;
+            padding: 17px 0 34px 0;
+        }
+
+        .content_seven li {
+            width: 100%;
+        }
+
+        .content_button {
+            text-align: center;
+        }
+
+        #submit {
+            background: #3697DD;
+            border-radius: 2px;
+            border-radius: 2px;
+            height: 24px;
+            width: 119px;
+            font-family: MicrosoftYaHei;
+            font-size: 12px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 12px;
+            border: none;
+            margin: 0 auto;
+        }
+
+        ul li {
+            display: block;
+            /* margin: 10px 20px; */
+            line-height: 20px;
+        }
+
+        .scoreResult {
+            width: 24rem;
+            height: 13rem;
+            background: url(images/defen1.png) 100% 100%;
+            margin: 5rem auto;
+            background-position: center;
+        }
+
+        .score-body {
+            margin-left: 1rem;
+        }
+
+        .complate-que {
+            font-family: MicrosoftYaHei;
+            font-size: 24px;
+            color: #676767;
+            letter-spacing: 0;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .score-get {
+            font-family: MicrosoftYaHei;
+            font-size: 24px;
+            color: #676767;
+            letter-spacing: 0;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .score-num {
+            font-family: MicrosoftYaHei;
+            font-size: 45px;
+            color: #FF463D;
+            letter-spacing: 0;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 750px) {
+            #submit {
+                background: #3697DD;
+                border-radius: 2px;
+                border-radius: 2px;
+                height: 3rem;
+                width: 100%;
+                font-family: MicrosoftYaHei;
+                font-size: 12px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                text-align: center;
+                line-height: 12px;
+                border: none;
+                margin: 0 auto;
+            }
+            .content ul li span{
+                display: grid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="questionnaire">
+            <div class="Worldhead">iDeal有奖竞猜，抢先体验Vintage白皮肤</div>
+            <div class="content">
+                <h2>
+                    <span>*</span>1、我国开始实行以市场供求为基础、参考一篮子货币进行调节、有管理的浮动汇率制度，不再盯住单一美元的时间是（）年？</h2>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio0" value="A">
+                            <span>A. 2003</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio0" value="B">
+                            <span>B. 2004</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio0" value="C">
+                            <span>C. 2005</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio0" value="D">
+                            <span>D. 2006</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2>
+                    <span>*</span>2、银行间外汇市场即期交易支持以下哪种交易方式？</h2>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio1" value="A">
+                            <span>A. ESP</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio1" value="B">
+                            <span>B. RFQ</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio1" value="C">
+                            <span>C. ODM </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio1" value="D">
+                            <span>D. 以上都是</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2>
+                    <span>*</span>3、以下哪个货币对尚未在银行间外汇市场挂牌？</h2>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio2" value="A">
+                            <span>A. 人民币对美元</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio2" value="B">
+                            <span>B. 人民币对马来西亚林吉特</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio2" value="C">
+                            <span>C. 人民币对印度卢比</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio2" value="D">
+                            <span>D. 欧元对英镑</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2>
+                    <span>*</span>4、银行间外币对市场开市时间为北京时间：</h2>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio3" value="A">
+                            <span>A. 7点</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio3" value="B">
+                            <span>B. 7点半</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio3" value="C">
+                            <span>C. 9点</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio3" value="D">
+                            <span>D. 9点半</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2>
+                    <span>*</span>5、人民币外汇远期掉期交易暂不支持以下哪种交易模式/功能？</h2>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio4" value="A">
+                            <span>A. 撮合</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio4" value="B">
+                            <span>B. 询价RFQ</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio4" value="C">
+                            <span>C. 询价协商</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio4" value="D">
+                            <span>D. 询价ESP</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2>
+                    <span>*</span>6、 以下哪个币种可通过外汇交易系统进行拆借和回购？</h2>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio5" value="A">
+                            <span>A. CHF</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio5" value="B">
+                            <span>B. RUB</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio5" value="C">
+                            <span>C. SGD</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio5" value="D">
+                            <span>D. SAR</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="content content_seven">
+                <h2>
+                    <span>*</span>7、关于外币对期权交易说法正确的是：</h2>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio6" value="A">
+                            <span>A. 外币对期权支持全额和差额两种交割方式</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio6" value="B">
+                            <span>B. 期权费币种可自由选择，交易双方可自行协商货币对中任何一种</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio6" value="C">
+                            <span>C. 交易时间同人民币外汇期权保持一致，为9:30-23:30</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio6" value="D">
+                            <span>D. 首推六个货币对的欧式期权交易，支持询价和iDeal协商交易达成</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2>
+                    <span>*</span>8、iDeal FX 交易系统不支持以下哪种交易产品？</h2>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio7" value="A">
+                            <span>A. 外汇期权-Call Spread</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio7" value="B">
+                            <span>B. 外汇期权-Butterfly</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio7" value="C">
+                            <span>C. G7 CCS</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio7" value="D">
+                            <span>D. FX Spot</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="content content_checkbox">
+                <h2>
+                    <span>*</span>9．以下（）为今年以来，外汇交易平台的新增优化功能？（多选题）</h2>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="checkbox" value="A">
+                            <span>A、支持单边询价和向全市场最优前10位做市商询价</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="checkbox" value="B">
+                            <span>B、推出止损订单</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="checkbox" value="C">
+                            <span>C、推出一键修改有效订单</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="checkbox" value="D">
+                            <span>D、支持价格卡面下直接获取对手方信息功能</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="content content_checkbox">
+                <h2>
+                    <span>*</span>10. 外汇交易系统可支持以下哪些外币回购交易？（多选题）</h2>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="checkbox1" value="A">
+                            <span>A：以欧元债为抵押品的美元回购</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="checkbox1" value="B">
+                            <span>B：以日元债为抵押品的美元回购</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="checkbox1" value="C">
+                            <span>C：以欧元债为抵押品的马来西亚林吉特回购</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="checkbox1" value="D">
+                            <span>D：以美元债为抵押品的美元回购</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="content_button">
+                <button name="submit" id="submit" value="提交">提交</button>
+            </div>
+        </div>
+        <div class="scoreResult" style="display: none;">
+            <div class="score-body">
+                <div class="complate-que">
+                    恭喜您已完成iDeal有奖竞猜！
+                </div>
+                <div class="score-get">
+                    您的得分为
+                </div>
+                <div class="score-num">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://172.19.222.60/fx-pages/fx_questionnaire/js/jquery-3.4.1.min.js"></script>
+<script>
+    $(function () {
+        let search = document.location.search;
+
+        submitRequest("");
+
+        $(".content input[name^='radio']").click(function () { //input[name='radio'] 单选按钮只要被点击  那么他的选中状态永远都是true        
+            $(this).parent().parent("li").addClass("checked").siblings("li").removeClass("checked").parents(".content").attr(
+                "data-id", "checkBox");
+        });
+
+        $(".content_checkbox").each(function () {
+            var self = $(this);
+            $(this).find("input[name^='checkbox']").click(function () {
+                if (this.checked == true) {
+                    $(this).parent().parent("li").addClass("checked");
+                } else {
+                    $(this).parent().parent("li").removeClass("checked");
+                }
+
+                if (self.find("li").hasClass("checked")) {
+                    self.attr("data-id", "checkBox");
+                } else {
+                    self.removeAttr("data-id");
+                }
+
+            });
+
+
+        });
+
+        $("#submit").click(function () {//提交获得分数
+            console.log("放过")
+            let fristVal = $("input[type='radio'][name='radio0']:checked").val();
+            let secondVal = $("input[type='radio'][name='radio1']:checked").val();
+            let threeVal = $("input[type='radio'][name='radio2']:checked").val();
+            let fourVal = $("input[type='radio'][name='radio3']:checked").val();
+            let fiveVal = $("input[type='radio'][name='radio4']:checked").val();
+            let sixVal = $("input[type='radio'][name='radio5']:checked").val();
+            let sevenVal = $("input[type='radio'][name='radio6']:checked").val();
+            let eightVal = $("input[type='radio'][name='radio7']:checked").val();
+
+            let checkboxObj = document.getElementsByName("checkbox");
+            let nineVal = getCheckboxVal(checkboxObj);
+
+            let checkboxObj1 = document.getElementsByName("checkbox1");
+            let tenVal = getCheckboxVal(checkboxObj1)
+
+            console.log(fristVal, secondVal, threeVal, fourVal, fiveVal, sixVal, sevenVal, eightVal, nineVal, tenVal)
+
+            function getCheckboxVal(obj) {//获取多选题选择的答案
+                let check_val = '';
+                for (k in obj) {
+                    if (obj[k].checked) {
+                        check_val = check_val + obj[k].value;
+                    }
+                }
+                return check_val
+            }
+            var contentLen = $(".content").length;//题目总数
+            var checkLen = $("div[data-id='checkBox']").length;//已选择题目数
+            if (contentLen == checkLen) {//判断题目数和已选择题目数是否相等
+                console.log('可以提交')
+                //判断答题分数
+                let getpoint = Number = 0;
+                if (fristVal == "C") {
+                    getpoint += 10;
+                }
+                if (secondVal == "D") {
+                    getpoint += 10;
+                }
+                if (threeVal == "C") {
+                    getpoint += 10;
+                }
+                if (fourVal == "A") {
+                    getpoint += 10;
+                }
+                if (fiveVal == "D") {
+                    getpoint += 10;
+                }
+                if (sixVal == "C") {
+                    getpoint += 10;
+                }
+                if (sevenVal == "B") {
+                    getpoint += 10;
+                }
+                if (eightVal == "D") {
+                    getpoint += 10;
+                }
+                if (nineVal == "ABCD") {
+                    getpoint += 10;
+                }
+                if (tenVal == "ABD") {
+                    getpoint += 10;
+                }
+                console.log('最终得分', getpoint);
+                let r = confirm("请确认是否提交答卷");
+                if (r == true) {
+                    submitRequest(getpoint);
+                } else {
+
+                }
+            } else {
+                console.log('请完成全部题目后再提交');
+                alert("请完成全部题目后再提交");
+            }
+
+        })
+
+        // 请求
+        function postData(...args) {
+            let data = {};
+            if (args.length > 0) {
+                for (let key of args) {
+                    data[key] = getOpt(key);
+                }
+            }
+            return data;
+        }
+
+        // 获取配置信息
+        function getOpt(key) {
+            let reg = new RegExp('[^\?&]?' + encodeURI(key) + '=[^&]+');
+            let arr = search.match(reg);
+            if (arr) {
+                let str = decodeURI(arr[0].substring(arr[0].search('=') + 1));
+                return str.substring(0, str.length);
+            }
+            return null;
+        }
+        function submitRequest(point) {
+
+            let requestData = postData('token', 'account');
+            console.log("chuancan", requestData);
+            let deviceType = getOpt('deviceType');
+            let URL = '/cfetsmessenger/cbsfx/advert/advertnaire';
+            if (!deviceType) {//判断是pc端
+                let loginInfo;
+                let userInfo = localStorage.getItem("FX-CHAT_LOGIN_INFO");
+                if (userInfo) {//判断不是pc端也不是移动端
+                    loginInfo = JSON.parse(userInfo)
+                    requestData['token'] = loginInfo.value.token;
+                    requestData['user_login'] = loginInfo.value.userlogin;
+                } else {//判断不是pc端也不是移动端
+
+                }
+            } else if (deviceType) {//判断是否为移动端
+                if (!requestData['user_login']) {
+                    requestData['user_login'] = requestData.account;
+                    delete requestData.account;
+                    console.log("传参2", requestData);
+                }
+            }
+
+            requestData['score'] = point;
+            console.log("传参", requestData);
+
+
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    onResolve(xhr.response);
+                }
+            };
+
+            xhr.onerror = (error) => {
+                let message;
+                console.log('请求error');
+                message = '当前系统繁忙，请稍后再试';
+                alertMessage(message);
+            }
+
+            xhr.open('POST', URL);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            xhr.send(JSON.stringify(requestData));
+        }
+        function alertMessage(message) {
+            container.style.display = 'flex';
+            messageInfo.innerText = message;
+        }
+        function onResolve(response) {
+            response = JSON.parse(response);
+            if (response.error_code == 0) {
+                if (response.score != null) {
+                    $('.scoreResult').css('display', 'block');
+                    $('.questionnaire').css('display', 'none');
+                    $('.score-num').text(response.score);
+                }
+            } else {
+                alert(response.error_msg)
+            }
+        }
+
+    });
+
+
+</script>

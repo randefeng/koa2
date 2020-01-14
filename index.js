@@ -67,6 +67,17 @@ router.get('/:category', async function (ctx) {
     await ctx.render(ctx.params.category);
   }
 });
+router.get('/:category/:rotate', async function (ctx) {
+  var pathSelf = ""
+  for(let key  in ctx.params){
+    pathSelf+= ctx.params[key]+"/"
+}
+  if (ctx.params == '{}') {
+    await ctx.render('home');
+  } else {
+    await ctx.render( pathSelf);
+  }
+});
 // router.get('/' , async function (ctx) {
 //   console.log(ctx.params)
 
