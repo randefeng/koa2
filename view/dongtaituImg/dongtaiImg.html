@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<base href="https://qmt.xiankz.vip/" />
+<title>&#30331;&#24405;</title>
+<link href="source/plugin/aljlogin/static/css/top.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="source/plugin/aljlogin/static/css/style.css" type="text/css"/>
+<link rel="stylesheet" href="source/plugin/aljlogin/static/mlayer/need/layer.css">
+<script src="source/plugin/aljlogin/static/js/jquery.min.js" type="text/javascript"></script>
+<script src="source/plugin/aljlogin/static/mlayer/layer.js" type="text/javascript" type="text/javascript"></script><script>
+    function QFH5ready(){
+        QFH5.getUserInfo(function(state,data){
+            if(state!=1){
+                QFH5.jumpLogin(function(state,data){});
+                window.history.back();
+            }
+        })
+    }
+</script>
+<script src="source/plugin/aljlogin/static/vegas/vegas.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="source/plugin/aljlogin/static/vegas/jquery.vegas.min.css">
+<script>
+
+    $( function() {
+        var slides = [];
+
+                slides.push({
+            src: 'source/plugin/aljlogin/static/images/bh.jpg',
+        });
+                slides.push({
+            src: 'source/plugin/aljlogin/static/images/1.jpg',
+        });
+                console.log(slides);
+        $('body').vegas({
+            delay: 8000,
+            timer:false,
+            transition:"fade2",
+            transitionDuration:1000,
+            animation:"random",
+            animationDuration:4000,
+            overlay:"source/plugin/aljlogin/static/images/zhezhao.png",
+            slides: slides
+        } )
+    } );
+</script>
+<style>
+    .login_nav .title:before {
+        position: absolute;
+        top: 11px;
+        width: 90%;
+        left: 50%;
+        margin-left: -45%;
+        height: 1px;
+        background: none;
+        content: '';
+    }
+
+    .login_nav .title {
+        margin-bottom: 15px !important;
+    }
+    .login_nav .title span {
+        background: none;
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: bold;
+    }
+    .login_nav li a {
+        color: #ffffff;
+        display: block;
+        font-weight: bold;
+    }
+    .slogan {
+        z-index: 0;
+        background:none url('../images/back.png') repeat-x;
+    }
+    .register{margin-top: 40%;}
+    body{
+        background: url(source/plugin/aljlogin/static/images/bh.jpg) no-repeat center center;
+    }
+    .slogan img{
+        width: 80px !important;height: 80px !important;border-radius: 80px !important;
+    }
+</style>
+</head>
+
+<body>
+  <header>
+        <nav class="header alpha">
+          <div class="header-left"> <a href="javascript:;" onclick="history.go(-1);" data-action="ui-subview-switch-back">
+          	<img src="source/plugin/aljlogin/static/images/deta_07.png" width="13/"></a> </div>
+        </nav>
+      </header>
+<div class="slogan" >
+<img src="source/plugin/aljlogin/static/images/login.png" style="width:120px;height:120px;border-radius:100px;z-index:999;">
+        </div>
+
+<iframe name="submitiframe" style="display:none;"></iframe>
+<form id="login" method="post" action="plugin.php?id=aljlogin" target="submitiframe" accept-charset="UTF-8">
+        <input type="hidden" value="a29a1297" name="formhash">
+        <input type="hidden" value="https://qmt.xiankz.vip/plugin.php?id=xigua_hb&id=xigua_hb&ignore1=&idu=18312&mobile=2&x=&ac=&needlogin=1" name="referer">
+    <input type="hidden" value="" name="ticket" id="ticket">
+    <input type="hidden" value="" name="randstr" id="randstr">
+    <div class="login">
+    <div class="login-name">
+    <i class="image-icon icon1"></i>
+    <input name="username" type="text" value="" placeholder="&#36134;&#21495;&#47;&#25163;&#26426;&#21495;"/>
+   <div class="clear"></div>
+   </div>
+   <div class="login-name">
+   <i class="image-icon icon2"></i>
+   <input type="password" value="" name="password" placeholder="&#23494;&#30721;"/>
+      <a href="plugin.php?id=aljlogin&amp;act=forgot&amp;pluginid=" style="display:block; position:absolute; right:5px;padding-left: 5px; top:9px; font-size:12px;border-left: 1px solid #eeeeee;">&#24536;&#35760;&#63;</a>
+      <div class="clear"></div>
+   </div>
+
+   <button type="submit" class="login-submit" id="TencentCaptcha" data-appid="" data-cbfn="callback"  style="background-color:#63AEFF">&#30331;&#24405;</button>
+</div>
+</form><style>
+                                .icon5 {
+            background: url(source/plugin/aljlogin/static/images/logo/20191218/20191218192155977.png) no-repeat;
+            background-position: center;
+            background-size: 32px auto;
+        }
+            </style>
+<div class="login_nav" style="padding-bottom:20px;">
+    <div class="title">
+                <span>
+        &#24555;&#25463;&#30331;&#24405;&#47;&#27880;&#20876;
+    </span>
+    </div>
+    <ul>
+                                        <li class="reg">
+            <a href="plugin.php?id=aljlogin&amp;act=register&amp;pluginid=&amp;referer=https%3A%2F%2Fqmt.xiankz.vip%2Fplugin.php%3Fid%3Dxigua_hb%26id%3Dxigua_hb%26ignore1%3D%26idu%3D18312%26mobile%3D2%26x%3D%26ac%3D%26needlogin%3D1">
+                <i class="imge icon5"></i>
+                &#27880;&#20876;</a>
+        </li>
+        
+    </ul>
+</div><script>
+    window.callback = function(res){
+        console.log(res)
+        // res���û������ر���֤�룩= {ret: 2, ticket: null}
+        // res����֤�ɹ��� = {ret: 0, ticket: "String", randstr: "String"}
+        if(res.ret === 0){
+            //alert(res.ticket)   // Ʊ��
+            $('#ticket').val(res.ticket);
+            $('#randstr').val(res.randstr);
+            $('#login').submit();
+        }
+        layer.closeAll();
+    }
+function tips(info,url){
+if(info == 0){
+layer.open({
+content: '\u64cd\u4f5c\u6210\u529f'
+ ,skin: 'msg'
+,time: 2 //2����Զ��ر�
+,end: function() {
+location.href=location.href;
+}
+});
+}else{
+if(url){
+layer.open({
+content: info
+ ,skin: 'msg'
+,time: 2 //2����Զ��ر�
+,end: function() {
+location.href=url;
+}
+});
+
+}else{
+layer.open({
+content: info
+ ,skin: 'msg'
+,time: 2 //2����Զ��ر�
+});
+}
+}
+}
+</script>
+</body>
+</html>

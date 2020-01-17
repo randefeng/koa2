@@ -16,7 +16,7 @@ render(app, {
 app.use(koaBody({
   multipart: true,
   formidable: {
-    maxFileSize: 200 * 1024 * 1024    // 设置上传文件大小最大限制，默认2M
+    maxFileSize: 200 * 1024 * 1024 // 设置上传文件大小最大限制，默认2M
   }
 }));
 app.use(static('./static'));
@@ -28,7 +28,7 @@ router.get('/', async function (ctx) {
 router.post('/uploadfile', async (ctx, next) => {
   // 上传单个文件
   const file = ctx.request.files.file; // 获取上传文件
-  console.log(ctx) 
+  console.log(ctx)
   // 创建可读流
   const reader = fs.createReadStream(file.path);
 
@@ -40,22 +40,26 @@ router.post('/uploadfile', async (ctx, next) => {
   reader.pipe(upStream);
   return ctx.body = "上传成功！";
 });
-router.get('/download/:name', async function (ctx){
+router.get('/download/:name', async function (ctx) {
 
   console.log('------------')
 
   const name = ctx.params.name;
   const path = `upload/${name}`;
   ctx.attachment(path);
-   await send(ctx, path);
- })
- //test 
- router.post('/test', async function (ctx) {
-        console.log('test=========')
-          let postData = ctx.request.body;
+  await send(ctx, path);
+})
+//test 
+router.post('/test', async function (ctx) {
+  console.log('test=========')
+  let postData = ctx.request.body;
 
-        console.log(postData)
-    ctx.response.body = {status:200,msg:'这是post测试的返回数据',data:postData};
+  console.log(postData)
+  ctx.response.body = {
+    status: 200,
+    msg: '这是post测试的返回数据',
+    data: postData
+  };
 
 });
 router.get('/:category', async function (ctx) {
@@ -69,13 +73,13 @@ router.get('/:category', async function (ctx) {
 });
 router.get('/:category/:rotate', async function (ctx) {
   var pathSelf = ""
-  for(let key  in ctx.params){
-    pathSelf+= ctx.params[key]+"/"
-}
+  for (let key in ctx.params) {
+    pathSelf += ctx.params[key] + "/"
+  }
   if (ctx.params == '{}') {
     await ctx.render('home');
   } else {
-    await ctx.render( pathSelf);
+    await ctx.render(pathSelf);
   }
 });
 // router.get('/' , async function (ctx) {
@@ -98,6 +102,26 @@ router.get('/:category/:rotate', async function (ctx) {
 //   await ctx.render('index');
 // });
 
+var pathName = "D:/koa2/upload";
+//readFile
+//读取本地文件 D:\koa2\upload
+function readFile(params) {
+  fs.readdir(pathName, function (err, files) {
+    var dirs = [];
+    (function iterator(i) {
+      if (i == files.length) {
+        console.log(dirs);
+        return;
+      }
+      fs.stat(path.join(pathName, files[i]), function (err, data) {
+        if (data.isFile()) {
+          dirs.push(files[i]);
+        }
+        iterator(i + 1);
+      });
+    })(0);
+  });
+}
 
 app
   .use(router.routes())
@@ -106,3 +130,4 @@ app
 app.listen(3000, () => {
   console.log('This server is running at http://localhost:' + 3000)
 })
+//000031_1576202505093 (1).apk
